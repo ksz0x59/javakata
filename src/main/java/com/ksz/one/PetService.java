@@ -67,12 +67,6 @@ public class PetService {
             personPetMap.put(oldVal, newVal);
         }
 
-        /*personPetMap.entrySet().forEach( e -> {
-            System.out.println(e.getKey());
-            System.out.println(e.getValue());
-            System.out.println("--------------");
-        });*/
-
         return personPetMap.entrySet().stream()
                 .filter(e -> e.getValue().size() == 1)
                 .map(Map.Entry::getKey)
@@ -86,12 +80,6 @@ public class PetService {
                 .collect(Collectors
                         .groupingBy((Map.Entry::getValue), Collectors.mapping(Map.Entry::getKey, Collectors.toList())));
 
-        /*personPetMap.entrySet().forEach( e -> {
-            System.out.println(e.getKey());
-            System.out.println(e.getValue());
-            System.out.println("--------------");
-        });*/
-
         return personPetMap.entrySet().stream()
                 .filter(e -> e.getValue().size() == 1)
                 .map(Map.Entry::getKey)
@@ -104,12 +92,6 @@ public class PetService {
         Map<Person, List<Pet>> personPetMap = petsMap.entrySet().stream()
                 .collect(Collectors
                         .groupingBy((Map.Entry::getValue), Collectors.mapping(Map.Entry::getKey, Collectors.toList())));
-
-        /*personPetMap.entrySet().forEach( e -> {
-            System.out.println(e.getKey());
-            System.out.println(e.getValue());
-            System.out.println("--------------");
-        });*/
 
 
         TreeSet<Integer> petCountSet = new TreeSet<>();

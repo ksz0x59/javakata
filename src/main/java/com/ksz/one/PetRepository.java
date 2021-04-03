@@ -22,6 +22,7 @@ public class PetRepository {
         petMap.put(new Pet("Lily", 7, false), new Person("Sophia", 19, Sex.FEMALE));
         petMap.put(new Pet("Molly", 13, false), new Person("Charlotte", 25, Sex.FEMALE));
         petMap.put(new Pet("Bailey", 9, false), new Person("Mia", 19, Sex.FEMALE));
+        petMap.put(new Pet("Stanley", 15, true), new Person("Sarah", 19, Sex.FEMALE));
     }
 
     public Map<Pet, Person> getAllPets () {
